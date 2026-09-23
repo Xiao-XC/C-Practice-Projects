@@ -1,29 +1,15 @@
-[README.md](https://github.com/user-attachments/files/32577857/README.md)
-# C-Practice-Projects
-All C projects I did
-# C Programming Journey
+# C Projects
 
-Projects and exercises from working through Bro Code's *C Programming Full Course for Free*, built during my junior year to strengthen low-level programming fundamentals (memory, pointers, manual data handling) for internship/job applications.
-
-Progress and resume-bullet drafts are tracked in [`c-project-tracker.md`](./c-project-tracker.md).
-
-## Structure
-Each project lives in its own folder:
-```
-/project-01-shopping-cart
-    shopping_cart.c
-    README.md   (what it does, how to compile/run, what it taught me)
-/project-02-...
-```
-
-## How to build/run
-Most projects are single-file and compile with:
-```bash
-gcc filename.c -o output_name
-./output_name
-```
+A collection of C projects I'm building while learning — starting with Bro Code's *C Programming Full Course for Free* and expanding into independent projects as I go.
 
 ## Projects
-| # | Project | Concepts |
-|---|---------|----------|
-| 1 | Shopping Cart Calculator | strings, `fgets`, `scanf`, float math, formatted output |
+
+| Project | Description | Concepts |
+|---------|--------------|----------|
+| [Shopping Cart Program](./Shopping%20Cart%20Program) | Calculates the total cost of a purchase from item name, price, and quantity input | strings, `fgets`, `scanf`, float math, formatted output |
+
+More projects coming as I build them — pointers, structs, file I/O, and eventually a small multi-file project with a Makefile.
+
+## About
+
+Junior year student learning C to strengthen low-level programming fundamentals (memory, pointers, manual data handling). Each project folder has its own README with more detail on what it does and what I learned building it.
