@@ -17,6 +17,8 @@ How many of the item/items would you like to purchase?: 3
 You have brought 3 apples
 The total cost of 3 apples is: $7.50
 ```
+<img width="1042" height="194" alt="Screenshot 2026-09-23 183517" src="https://github.com/user-attachments/assets/69b6bff6-1a82-4f5e-a296-85d9b1a077d3" />
+
 
 ## How to build/run
 ```bash
