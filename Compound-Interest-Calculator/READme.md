@@ -38,4 +38,4 @@ gcc compound_interest.c -o compound_interest -lm
 - Escaping a literal `%` character in a `printf` format string (`%%`)
 
 ## What I learned
-Learned that `%` has special meaning inside a `printf` format string — it signals the start of a format specifier, so a lone `%` (like in "interest rate % (r)") is invalid and needs to be escaped as `%%` to print an actual percent sign. This is a common first-time `printf` gotcha, similar to how `fgets` needed manual newline handling in earlier projects — small "leaky abstraction" details in C that don't show up in higher-level languages.<img width="668" height="182" alt="Screenshot 2026-09-24 172153" src="https://github.com/user-attachments/assets/f6f87dd9-093c-48f1-a971-be3abc3f11ca" />
+Learned that `%` has special meaning inside a `printf` format string — it signals the start of a format specifier, so a lone `%` (like in "interest rate % (r)") is invalid and needs to be escaped as `%%` to print an actual percent sign. This is a common first-time `printf` gotcha, similar to how `fgets` needed manual newline handling in earlier projects — small "leaky abstraction" details in C that don't show up in higher-level languages.
