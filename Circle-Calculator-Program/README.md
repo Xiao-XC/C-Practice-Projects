@@ -18,7 +18,8 @@ Surface Area: 1256.64
 Volume: 4188.79
 ```
 
-![Program output](./output.png)
+<img width="383" height="134" alt="output" src="https://github.com/user-attachments/assets/040a5522-6d96-463a-ad1d-bab70edec87a" />
+
 
 ## How to build/run
 Since this uses `math.h`, the math library needs to be linked explicitly on most systems:
