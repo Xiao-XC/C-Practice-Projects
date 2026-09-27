@@ -43,7 +43,7 @@ _(move projects here when you start them)_
 **Tools/concepts used:** Core C (`char[]`, `float`, `int`), `fgets` for string input, `scanf` for numeric input, `strlen`, formatted output (`%.2f`, `%c`, `%s`)
 **What I learned:** `fgets` includes the trailing newline in the buffer, so it has to be manually stripped with `item[strlen(item)-1] = '\0'` — a classic C gotcha that string input functions in higher-level languages hide. Also practiced mixing input types (string + float + int) in one program and formatting output cleanly.
 **Resume bullet (final):** "Built a C command-line program to calculate purchase totals from user input, handling mixed data types (strings, floats, integers) and manual string buffer cleanup."
-**GitHub link:** [Shopping Cart Program](https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Shopping-Cart-Program)
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Shopping-Cart-Program
 
 ---
 
@@ -84,6 +84,36 @@ _(move projects here when you start them)_
 **What I learned:** First project using real branching logic instead of a straight-line sequence of inputs and outputs — structuring a menu-driven program where the user's choice determines which formula runs. Foundation for more complex control flow (loops, switch statements) coming up next.
 **Resume bullet (final):** "Built a menu-driven C program converting between kilograms and pounds, using conditional branching and input validation."
 **GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Weight-Converter-Program
+
+---
+
+**Project name:** Temperature Conversion Calculator
+**Date:** Sept 2026
+**What it does:** Presents a menu to convert temperature between Celsius and Fahrenheit based on user choice, with error handling for invalid menu selections.
+**Tools/concepts used:** `char` variables, `scanf("%c", ...)`, `if` / `else if` / `else` branching, temperature conversion formulas
+**What I learned:** Similar branching structure to the Weight Conversion project, but using a `char` instead of an `int` for the menu choice. Noticed the comparisons (`choice == 'C'`) are case-sensitive — a lowercase input currently falls into the invalid-choice branch, something to revisit with `toupper()` later.
+**Resume bullet (final):** "Built a menu-driven C program converting between Celsius and Fahrenheit, using character input and conditional branching."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Temperature-Converter
+
+---
+
+**Project name:** Basic Calculator
+**Date:** Sept 2026
+**What it does:** Performs addition, subtraction, multiplication, and division on two user-entered numbers based on an operator symbol, with division-by-zero handling.
+**Tools/concepts used:** `switch` statements with `case`/`default`/`break`, `char` operator comparison, `scanf(" %c", ...)` leading-space trick to skip whitespace between mixed input types
+**What I learned:** First time using `switch` instead of chained `if`/`else if` — cleaner for a fixed set of known options. Learned to add a leading space before `%c` in `scanf` to skip a leftover newline in the input buffer. Also noticed a minor UX issue: dividing by zero still prints `Result: 0.0000` after the error message since `result` was never assigned — worth an early exit or flag in a future revision.
+**Resume bullet (final):** "Built a C command-line calculator using switch-case logic for four arithmetic operations, including division-by-zero handling."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Basic-Calculator-Program
+
+---
+
+**Project name:** Number Guessing Game
+**Date:** Sept 2026
+**What it does:** Generates a random number between 1 and 100 and lets the user guess it repeatedly, giving "too high"/"too low"/"correct" feedback and tracking the number of tries.
+**Tools/concepts used:** `rand()` and `srand(time(NULL))` for randomized output, `do-while` loops, loop control based on a comparison, tracking state across iterations (`tries++`)
+**What I learned:** First bug I found and fixed myself without it being flagged first — my original random-number formula could produce values outside the intended 1–100 range. Fixed it, then traced through the math afterward and realized the fix technically only worked because `min` was `1` (the `-min`/`+min` terms canceled out); a fully generalizable version would be `min + rand() % (max - min + 1)`. Good reminder to test edge cases, not just the happy path.
+**Resume bullet (final):** "Built a C number-guessing game with randomized number generation, loop-based game logic, and self-debugged a range-calculation bug."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Number-Guessing-Game
 
 ---
 
