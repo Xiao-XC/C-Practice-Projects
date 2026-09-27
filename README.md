@@ -11,6 +11,9 @@ A collection of C projects I'm building while learning — starting with Bro Cod
 | [Circle-Calculator-Program](./Circle-Calculator-Program) | Calculates a sphere's area, surface area, and volume from a given radius | `double`, `const`, `math.h`, `pow()` |
 | [Compound-Interest-Calculator](./Compound-Interest-Calculator) | Calculates the future value of an investment using the compound interest formula | multi-variable math formulas, `pow()`, escaping `%` in `printf` |
 | [Weight-Converter-Program](./Weight-Converter-Program) | Converts weight between kilograms and pounds based on a menu choice | `if`/`else if`/`else` branching, conditional logic |
+| [Temperature-Converter](./Temperature-Converter) | Converts temperature between Celsius and Fahrenheit based on a menu choice | `char` input, `if`/`else if`/`else` branching |
+| [Basic-Calculator-Program](./Basic-Calculator-Program) | Performs addition, subtraction, multiplication, and division based on user input | `switch` statements, division-by-zero handling |
+| [Number-Guessing-Game](./Number-Guessing-Game) | Generates a random number and lets the user guess it with high/low feedback and a tries counter | `rand()`, `srand()`, `do-while` loops |
 
 More projects coming as I build them — loops, arrays, pointers, structs, file I/O, and eventually a small multi-file project with a Makefile.
 
