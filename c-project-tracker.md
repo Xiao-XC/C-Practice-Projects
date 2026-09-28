@@ -117,6 +117,26 @@ _(move projects here when you start them)_
 
 ---
 
+**Project name:** Rock Paper Scissors
+**Date:** Sept 2026
+**What it does:** Lets the user play Rock Paper Scissors against the computer — user picks an option (with input validation), computer picks randomly, and a winner is determined.
+**Tools/concepts used:** Function prototypes/declarations, splitting logic across multiple functions (`getUserChoice()`, `getComputerChoice()`, `checkWinner()`), passing parameters between functions, return values, `do-while` input validation, `switch` statements, compound logical conditions (`&&`/`||`)
+**What I learned:** First project breaking logic into separate functions instead of writing everything in `main()` — each function handles one specific job, which made the code easier to read and reason about compared to earlier single-function projects. Also practiced returning a value from a function and using it directly, and combining multiple conditions to check all three winning combinations.
+**Resume bullet (final):** "Built a C command-line Rock Paper Scissors game using modular function design, return values, and compound conditional logic to determine the winner."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Rock-Paper-Scissors
+
+---
+
+**Project name:** Unreliable Banking (ATM Simulator)
+**Date:** Sept 2026
+**What it does:** Simulates a simple ATM — check balance, deposit, and withdraw — with input validation and personality in the error messages (e.g. rejecting negative deposits, blocking overdrafts).
+**Tools/concepts used:** Multiple functions with return values updating shared state (`balance`) back in `main()`, function-level input validation, `switch` inside a `do-while` menu loop, `Sleep()` for timed pauses (Windows-specific via `windows.h`)
+**What I learned:** Continued practicing function decomposition from Rock Paper Scissors, this time with functions that both take a parameter and return a value used to update that same variable back in `main()` (`balance -= withdraw(balance)`). Also learned `windows.h`/`Sleep()` are platform-specific and won't compile as-is on Mac/Linux — a good early lesson in portability that hadn't come up in earlier projects using only `stdio.h` and `math.h`.
+**Resume bullet (final):** "Built a C command-line ATM simulator with modular deposit/withdraw functions, shared-state balance tracking, and input validation against invalid or excessive transactions."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Banking-Program
+
+---
+
 **Project name:**
 **Date:**
 **What it does:**
