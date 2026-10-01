@@ -16,8 +16,10 @@ A collection of C projects I'm building while learning — starting with Bro Cod
 | [Number-Guessing-Game](./Number-Guessing-Game) | Generates a random number and lets the user guess it with high/low feedback and a tries counter | `rand()`, `srand()`, `do-while` loops |
 | [Rock-Paper-Scissors](./Rock-Paper-Scissors) | Plays Rock Paper Scissors against the computer, with logic split across multiple functions | function prototypes, return values, `switch` statements |
 | [Banking-Program](./Banking-Program) | Simulates a simple ATM — check balance, deposit, and withdraw, with input validation | functions with shared state, input validation, platform-specific code (`windows.h`) |
+| [Quiz-Game](./Quiz-Game) | A multiple-choice quiz with score tracking, looping through parallel arrays of questions and answers | 2D arrays, parallel arrays, `for` loops, `toupper()` |
+| [Time-Utility-Program](./Time-Utility-Program) | Capstone project: digital clock, world clock, alarm, and countdown timer combined in one menu-driven app | `typedef struct`, arrays of structs, non-blocking input (`_kbhit`/`_getch`), elapsed-time math |
 
-More projects coming as I build them — loops, arrays, pointers, structs, file I/O, and eventually a small multi-file project with a Makefile.
+**Final project in Bro Code's *C Programming Full Course for Free*, and the project I'm most proud of in this repo.** More projects coming as I continue building beyond the course — pointers, file I/O, dynamic memory, and data structures.
 
 ## About
 
