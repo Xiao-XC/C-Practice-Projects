@@ -147,6 +147,16 @@ _(move projects here when you start them)_
 
 ---
 
+**Project name:** Digital Clock
+**Date:** Sept 2026
+**What it does:** Displays the current local time, refreshing every second, with a non-blocking option to power off back to the menu. Originally Bro Code's final course project, later expanded into one feature of the larger Time Utility Program.
+**Tools/concepts used:** `time_t`/`struct tm`, `time()`/`localtime()`, `Sleep()`, `system("cls")` for a clean redraw, non-blocking input with `_kbhit()`/`_getch()` from `conio.h`
+**What I learned:** Went through real iteration to get the refresh loop right. The first version used `scanf` inside the loop to check for power-off input, which blocked and paused the entire program — so the clock couldn't refresh freely, it would just freeze waiting for input each cycle. Switching to `_kbhit()`/`_getch()` fixed this, since it checks for a keypress without ever pausing execution. Also hit and fixed a real crash: passing `(*option)` into `scanf` instead of `option` — since `option` was already a pointer, dereferencing it passed a value where `scanf` needed an address, crashing the program. This debugging process became the foundation for the Digital Clock feature inside the Time Utility Program capstone.
+**Resume bullet (final):** "Built a live-updating C digital clock using non-blocking keyboard input, debugging a blocking-I/O design flaw and a pointer/value mix-up along the way."
+**GitHub link:** _(add once pushed)_
+
+---
+
 **Project name:** Time Utility Program (Capstone)
 **Date:** Sept 2026
 **What it does:** A multi-feature menu-driven program combining a digital clock, a world clock (multiple cities via an array of structs), an alarm (12-hour time with AM/PM), and a countdown timer with pause/resume — all running continuously without blocking on input. Started as Bro Code's final course project (a basic digital clock) and expanded well beyond the original scope as a true capstone.
