@@ -137,6 +137,26 @@ _(move projects here when you start them)_
 
 ---
 
+**Project name:** Quiz Game
+**Date:** Sept 2026
+**What it does:** A multiple-choice quiz about the solar system, looping through a set of questions and tracking the user's score, with case-insensitive answer checking.
+**Tools/concepts used:** 2D arrays of strings (`char questions[][100]`), parallel arrays indexed together in a loop, `for` loops, `toupper()` for input normalization, `sizeof(arr)/sizeof(arr[0])` for array length
+**What I learned:** First project using 2D string arrays and looping through parallel arrays instead of writing separate, repeated code for each question — a step toward scalable, DRY code. Applied `toupper()` to solve a case-sensitivity issue that had come up in an earlier project (Temperature Converter), where lowercase input incorrectly fell into the "invalid" branch.
+**Resume bullet (final):** "Built a C command-line quiz game using 2D arrays and parallel array indexing, with case-insensitive input handling and automatic score tracking."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Quiz-Game
+
+---
+
+**Project name:** Time Utility Program (Capstone)
+**Date:** Sept 2026
+**What it does:** A multi-feature menu-driven program combining a digital clock, a world clock (multiple cities via an array of structs), an alarm (12-hour time with AM/PM), and a countdown timer with pause/resume — all running continuously without blocking on input. Started as Bro Code's final course project (a basic digital clock) and expanded well beyond the original scope as a true capstone.
+**Tools/concepts used:** `typedef struct` (`Cities`, `timeAlarm`), arrays of structs, `time_t`/`struct tm`, `localtime()` vs `gmtime()`, non-blocking input (`_kbhit()`/`_getch()` from `conio.h`), ternary operators, 12-hour/24-hour time conversion, elapsed-time calculation via `time(NULL)` deltas, input buffer flushing
+**What I learned:** Debugged a real pointer/value mix-up (passing a dereferenced pointer into `scanf` instead of the pointer itself), a stale-state bug in the main menu loop, UTC-vs-local time confusion between the World Clock and Alarm features, 12-hour conversion edge cases at noon/midnight, and several "logic was right but the UI refresh order hid the result" bugs. Needed outside help designing the Timer's pause/resume elapsed-time logic specifically, since I didn't have a mental model for tracking elapsed time across pauses yet — went back afterward and traced through it until I could explain why `remaining` only updates at the moment of pausing while `startTime` resets fresh on each resume.
+**Resume bullet (final):** "Built a multi-feature C console application (digital clock, world clock, alarm, countdown timer) using structs, non-blocking input handling, and real-time elapsed-time calculations; independently debugged pointer, timezone, and UI-refresh-order bugs."
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Time-Utility-Program
+
+---
+
 **Project name:**
 **Date:**
 **What it does:**
