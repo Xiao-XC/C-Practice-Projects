@@ -153,7 +153,7 @@ _(move projects here when you start them)_
 **Tools/concepts used:** `time_t`/`struct tm`, `time()`/`localtime()`, `Sleep()`, `system("cls")` for a clean redraw, non-blocking input with `_kbhit()`/`_getch()` from `conio.h`
 **What I learned:** Went through real iteration to get the refresh loop right. The first version used `scanf` inside the loop to check for power-off input, which blocked and paused the entire program — so the clock couldn't refresh freely, it would just freeze waiting for input each cycle. Switching to `_kbhit()`/`_getch()` fixed this, since it checks for a keypress without ever pausing execution. Also hit and fixed a real crash: passing `(*option)` into `scanf` instead of `option` — since `option` was already a pointer, dereferencing it passed a value where `scanf` needed an address, crashing the program. This debugging process became the foundation for the Digital Clock feature inside the Time Utility Program capstone.
 **Resume bullet (final):** "Built a live-updating C digital clock using non-blocking keyboard input, debugging a blocking-I/O design flaw and a pointer/value mix-up along the way."
-**GitHub link:** _(add once pushed)_
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Digital-Clock
 
 ---
 
