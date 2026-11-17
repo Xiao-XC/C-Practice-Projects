@@ -1,3 +1,4 @@
+[c-project-tracker.md](https://github.com/user-attachments/files/34998707/c-project-tracker.md)
 # C Project Tracker
 **Goal:** Build a resume-ready project portfolio in C (Junior year)
 **Status:** Following Bro Code's "C Programming Full Course for Free"
@@ -164,6 +165,56 @@ _(move projects here when you start them)_
 **What I learned:** Debugged a real pointer/value mix-up (passing a dereferenced pointer into `scanf` instead of the pointer itself), a stale-state bug in the main menu loop, UTC-vs-local time confusion between the World Clock and Alarm features, 12-hour conversion edge cases at noon/midnight, and several "logic was right but the UI refresh order hid the result" bugs. Needed outside help designing the Timer's pause/resume elapsed-time logic specifically, since I didn't have a mental model for tracking elapsed time across pauses yet — went back afterward and traced through it until I could explain why `remaining` only updates at the moment of pausing while `startTime` resets fresh on each resume.
 **Resume bullet (final):** "Built a multi-feature C console application (digital clock, world clock, alarm, countdown timer) using structs, non-blocking input handling, and real-time elapsed-time calculations; independently debugged pointer, timezone, and UI-refresh-order bugs."
 **GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Time-Utility-Program
+
+---
+
+**Project name:** Array Divisibility Checker (ECE 340 Project #0)
+**Date:** Spring 2026 (ECE 340)
+**What it does:** Reads a user-specified number of integers (max 50) into an array, re-prompting until the count is valid, then labels each value as divisible by 3, 4, both, or none.
+**Tools/concepts used:** Fixed-size arrays, `#define MAX_SIZE`, validation loop, modulo, compound condition (`&& `) for the "both" case
+**What I learned:** Set up the array-and-validation habits used in the later data-structure projects. Edit to add your own notes.
+**Resume bullet (final):** Not for resume (intro exercise; covered by the data-structures bullet).
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Array-Divisibility-Checker
+
+---
+
+**Project name:** Linked List ADT (ECE 340 Project #1)
+**Date:** Spring 2026 (ECE 340)
+**What it does:** A singly linked list library with head/tail tracking: insert after a value or index, remove by value or index, reverse into a new list, palindrome check, and print, with error messages for bad lookups.
+**Tools/concepts used:** `typedef struct`, `malloc`/`free`, pointers, head/tail pointer maintenance, list traversal, empty-list/head/tail edge cases
+**What I learned:** Keeping `head` and `tail` consistent through every insert and remove path is where list bugs hide. Passed the instructor's test code with matching output. Edit to add your own notes.
+**Resume bullet (final):** Implemented a singly linked list library in C (insert/remove by value or index, reverse, palindrome check) with manual memory management; validated against instructor-provided test cases.
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Linked-List-ADT
+
+---
+
+**Project name:** Array Stack ADT (ECE 340 Project #2)
+**Date:** Spring 2026 (ECE 340)
+**What it does:** A stack of integers on a dynamic array that starts at capacity 4 and doubles when full, with Push, Pop, Peek, IsEmpty, GetLength, and PrintStack.
+**Tools/concepts used:** Dynamic arrays, `malloc`/`free`, amortized doubling, LIFO behavior, pointer parameters
+**What I learned:** Resizing means allocate, copy, free the old array, and update capacity in the right order. Output matches the instructor's expected output. Edit to add your own notes.
+**Resume bullet (final):** Implemented a dynamic-array stack in C with automatic capacity doubling; validated against instructor-provided test cases.
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Array-Stack-ADT
+
+---
+
+**Project name:** Priority Queue ADT (ECE 340 Project #3)
+**Date:** Spring 2026 (ECE 340)
+**What it does:** A max-heap priority queue stored in a dynamic array (capacity 4, doubles when full) with Enqueue (sift-up), Dequeue (sift-down), Peek, GetLength, GetHeight, and print.
+**Tools/concepts used:** Binary heap in array form (parent `(i-1)/2`, children `2i+1`/`2i+2`), sift-up/sift-down, dynamic resizing, height as floor(log2 n)
+**What I learned:** Heap order is maintained by swapping along one root-to-leaf path, so Enqueue and Dequeue are O(log n). Matches the instructor's expected output, including heights. Known gap: ties are not kept in insertion order. Edit to add your own notes.
+**Resume bullet (final):** Implemented a max-heap priority queue in C using a dynamically resized array with O(log n) enqueue and dequeue; validated against instructor-provided test cases.
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Priority-Queue-ADT
+
+---
+
+**Project name:** Hash Table ADT (ECE 340 Project #4)
+**Date:** Spring 2026 (ECE 340)
+**What it does:** A menu-driven hash table of integers using separate chaining: insert (ignoring duplicates), remove, and a printout of every bucket plus the load factor after each operation.
+**Tools/concepts used:** Modulo hash with negative-value handling, array of linked lists, nested structs, `malloc`/`free`, tail pointers, full cleanup on exit
+**What I learned:** Chaining reduces a collision to a list append, so Project #1 carried over directly; free nodes, then the bucket array, then the table. Fixed size, no rehashing. Edit to add your own notes.
+**Resume bullet (final):** Implemented a chained hash table in C (insert, remove, load-factor reporting) with full memory cleanup on exit.
+**GitHub link:** https://github.com/Xiao-XC/C-Practice-Projects/tree/main/Hash-Table-ADT
 
 ---
 
