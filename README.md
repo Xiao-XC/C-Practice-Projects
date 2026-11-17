@@ -1,6 +1,7 @@
+[README.md](https://github.com/user-attachments/files/34998658/README.md)
 # C Projects
 
-A collection of C projects I'm building while learning — starting with Bro Code's *C Programming Full Course for Free* and expanding into independent projects as I go.
+A collection of C projects I'm building while learning — starting with Bro Code's *C Programming Full Course for Free*, adding my ECE 340 data-structures coursework, and expanding into independent projects as I go.
 
 ## Projects
 
@@ -19,8 +20,13 @@ A collection of C projects I'm building while learning — starting with Bro Cod
 | [Quiz-Game](./Quiz-Game) | A multiple-choice quiz with score tracking, looping through parallel arrays of questions and answers | 2D arrays, parallel arrays, `for` loops, `toupper()` |
 | [Digital-Clock](./Digital-Clock) | A live-updating clock with non-blocking exit, originally Bro Code's final course project | `time_t`/`struct tm`, `_kbhit()`/`_getch()`, non-blocking input |
 | [Time-Utility-Program](./Time-Utility-Program) | Capstone project: digital clock, world clock, alarm, and countdown timer combined in one menu-driven app | `typedef struct`, arrays of structs, non-blocking input (`_kbhit`/`_getch`), elapsed-time math |
+| [Array-Divisibility-Checker](./Array-Divisibility-Checker) | Reads up to 50 integers into an array and labels each as divisible by 3, 4, both, or none (ECE 340 Project #0) | fixed-size arrays, input validation, modulo, compound conditions |
+| [Linked-List-ADT](./Linked-List-ADT) | Singly linked list library with insert/remove by value or index, reverse, and palindrome check (ECE 340 Project #1) | `typedef struct`, `malloc`/`free`, head/tail pointers, list traversal |
+| [Array-Stack-ADT](./Array-Stack-ADT) | Stack backed by a dynamic array that doubles when full (ECE 340 Project #2) | dynamic arrays, resizing, LIFO, pointer parameters |
+| [Priority-Queue-ADT](./Priority-Queue-ADT) | Max-heap priority queue in a dynamic array with sift-up/sift-down and height (ECE 340 Project #3) | binary heaps, array index math, O(log n) operations |
+| [Hash-Table-ADT](./Hash-Table-ADT) | Menu-driven hash table with separate chaining and load-factor display (ECE 340 Project #4) | hashing, collision handling, nested structs, memory cleanup |
 
-**Final project in Bro Code's *C Programming Full Course for Free*, and the project I'm most proud of in this repo.** More projects coming as I continue building beyond the course — pointers, file I/O, dynamic memory, and data structures.
+**Final project in Bro Code's *C Programming Full Course for Free*, and the project I'm most proud of in this repo.** The last five rows are ECE 340 coursework (linked list, stack, priority queue, hash table). More projects coming as I continue building beyond the course — file I/O and a multi-file project with a Makefile.
 
 ## About
 
